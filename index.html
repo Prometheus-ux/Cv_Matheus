@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currículo Interativo - Matheus Xavier</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Matheus Esperandio Xavier</h1>
+            <p>Desenvolvedor Front-End Jr | Estudante de ADS</p>
+        </header>
+
+        <nav>
+            <button type="button" onclick="showSection('sobre')">Sobre Mim</button>
+            <button type="button" onclick="showSection('formacao')">Formação</button>
+            <button type="button" onclick="showSection('experiencia')">Experiência</button>
+            <button type="button" onclick="showSection('habilidades')">Habilidades</button>
+            <button type="button" onclick="showSection('contato')">Contato</button>
+        </nav>
+
+        <main>
+            <section id="sobre" class="active">
+                <h2>Sobre Mim</h2>
+                <p>
+                    Estudante de Análise e Desenvolvimento de Sistemas apaixonado por tecnologia e inovação. Atualmente, atuo como Suporte N2 na Stefanini Brasil e estou em transição para a área de desenvolvimento Front-end, com o objetivo de me tornar Desenvolvedor Full Stack. Tenho grande vontade de aprender, crescer profissionalmente e contribuir com soluções eficientes. Busco uma oportunidade para aplicar meus conhecimentos, evoluir constantemente e agregar valor à equipe.
+                </p>
+            </section>
+
+            <section id="formacao">
+                <h2>Formação Acadêmica</h2>
+                <button class="accordion" type="button">
+                    Tecnólogo em Análise e Desenvolvimento de Sistemas
+                </button>
+                <div class="panel">
+                    <p>Faculdade Multivix - Em andamento</p>
+                </div>
+                <h3>Cursos Concluídos</h3>
+                <ul class="cursos">
+                    <li>
+                        <strong>HDI Desktop Advanced Support Technician</strong>
+                        <p>Suporte técnico avançado a usuários, com foco em atendimento eficiente e solução de problemas de TI.</p>
+                    </li>
+                    <li>
+                        <strong>ISO 9001</strong>
+                        <p>Compreensão e aplicação de sistemas de gestão da qualidade em conformidade com padrões internacionais.</p>
+                    </li>
+                    <li>
+                        <strong>Automação de Sistema</strong>
+                        <p>Automatização de processos de sistemas, utilizando ferramentas e scripts para aumentar a eficiência operacional.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="experiencia">
+                <h2>Experiência Profissional</h2>
+                <button class="accordion" type="button">Stefanini Brasil | Suporte N2 - Mar/2025 até o momento</button>
+                <div class="panel">
+                    <ul>
+                        <li>Identificação e solução de falhas em computadores, impressoras e equipamentos de TI</li>
+                        <li>Instalação e configuração de sistemas operacionais (Linux e Windows), softwares e periféricos</li>
+                        <li>Suporte técnico remoto e presencial para usuários</li>
+                        <li>Manutenção preventiva e corretiva da infraestrutura de TI (servidores, redes, dispositivos)</li>
+                        <li>Registro e acompanhamento de chamados via Service Desk</li>
+                        <li>Treinamento básico de usuários em ferramentas corporativas e boas práticas de TI</li>
+                    </ul>
+                </div>
+                <button class="accordion" type="button">Doc Soluções — Analista de Sistemas | Out/2024 - Fev/2025</button>
+                <div class="panel">
+                    <ul>
+                        <li>Monitoramento do sistema PrintWayy e análise de indicadores para ações preventivas</li>
+                        <li>Execução de procedimentos operacionais e solicitação de suporte técnico em campo</li>
+                        <li>Documentação das ações realizadas e acompanhamento da resolução de incidentes</li>
+                        <li>Suporte de Nível 2 em conjunto com o Service Desk para usuários finais</li>
+                        <li>Atualizações, manutenções e instalações do sistema PrintWayy</li>
+                    </ul>
+                </div>
+                <button class="accordion" type="button">Fênix Gráfica — Suporte Técnico | Jun/2023 - Jul/2024</button>
+                <div class="panel">
+                    <ul>
+                        <li>Reinstalação de programas, ajustes de configurações e substituição de hardware</li>
+                        <li>Atendimento técnico por telefone, chat e e-mail para resolução de problemas</li>
+                        <li>Registro detalhado de chamados, soluções aplicadas e atualizações em sistemas</li>
+                        <li>Contribuição para a base de conhecimento da equipe de suporte técnico</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="habilidades">
+                <h2>Habilidades</h2>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>Redes de computadores</li>
+                    <li>Excelentes habilidades de comunicação e interpessoais</li>
+                    <li>Resolução de problemas e suporte técnico</li>
+                    <li>Sistemas operacionais: Linux e Windows</li>
+                    <li>Facilidade em aprender</li>
+                </ul>
+            </section>
+
+            <section id="contato">
+                <h2>Contato</h2>
+                <ul>
+                    <li>Email: <a href="mailto:matheus.esperandio.xavier@gmail.com">matheus.esperandio.xavier@gmail.com</a></li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/matheus-esperandio-xavier-1b4967309/" target="_blank" rel="noopener">matheus-esperandio-xavier</a></li>
+                    <li>GitHub: <a href="https://github.com/Prometheus-ux" target="_blank" rel="noopener">Prometheus-ux</a></li>
+                    <li>WhatsApp: <a href="https://wa.me/5527988565187" target="_blank" rel="noopener">(27) 98856-5187</a></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script>
+        // Troca de seções
+        function showSection(sectionId) {
+            document.querySelectorAll('main section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Accordions
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordions = document.querySelectorAll('.accordion');
+            accordions.forEach(acc => {
+                acc.addEventListener('click', function () {
+                    this.classList.toggle('active');
+                    const panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
