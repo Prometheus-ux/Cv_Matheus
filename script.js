@@ -1,4 +1,3 @@
-// Alterna exibição das seções do currículo
 function showSection(id) {
   document.querySelectorAll("main section").forEach(section =>
     section.classList.remove("active")
@@ -9,8 +8,6 @@ function showSection(id) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 }
-
-// Accordion: expande/recolhe painéis de forma elegante
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".accordion").forEach(acc => {
     acc.addEventListener("click", function () {
@@ -24,14 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
         panel.style.maxHeight = panel.scrollHeight + "px";
       }
     });
-    // Inicializa painel fechado
     const panel = acc.nextElementSibling;
     panel.style.display = "none";
     panel.style.maxHeight = null;
   });
 });
-
-// Exibe certificado em um modal (caso usado no portfólio)
 function mostrarCertificado(caminho) {
   const container = document.getElementById("certificado-container");
   const img = document.getElementById("certificado-imagem");
@@ -40,8 +34,6 @@ function mostrarCertificado(caminho) {
     container.style.display = "flex";
   }
 }
-
-// Fecha o modal de certificado
 function fecharCertificado() {
   const container = document.getElementById("certificado-container");
   const img = document.getElementById("certificado-imagem");
