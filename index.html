@@ -114,16 +114,13 @@
         </main>
     </div>
     <script>
-        // Troca de seções
-        function showSection(sectionId) {
+     function showSection(sectionId) {
             document.querySelectorAll('main section').forEach(section => {
                 section.classList.remove('active');
             });
             document.getElementById(sectionId).classList.add('active');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-
-        // Accordions
         document.addEventListener('DOMContentLoaded', function () {
             const accordions = document.querySelectorAll('.accordion');
             accordions.forEach(acc => {
